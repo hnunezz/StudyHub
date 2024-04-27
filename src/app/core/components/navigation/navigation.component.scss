@@ -36,6 +36,8 @@ main {
     }
 
     header {
+        transition: ease-out 0.3s;
+        width: 227px;
         display: flex;
         gap: 14px;
         padding: 12px;
@@ -79,6 +81,7 @@ main {
             small {
                 @include utils.truncate;
 
+                transition: ease-out 0.3s;
                 font-size: 12px;
                 width: 150px;
             }
@@ -216,13 +219,27 @@ main {
         transition: ease 0.3s;
         width: 88px;
 
-        strong {
+        strong, small {
             transition: ease 0.3s;
             display: none;
         }
 
-        li.item {
-            width: 58px;
+        header {
+            transition: ease 0.3s;
+            width: 64px;
+        }
+
+       section#navigation {
+        width: 88px;
+            li.item {
+
+                &:hover{
+                    i {
+                        transition: ease 0.3s;
+                        color: var(--primary);
+                    }
+                }
+            }
         }
 
         footer {

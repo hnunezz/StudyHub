@@ -1,4 +1,10 @@
 main {
   padding: 10px;
   height: calc(100% - 20px);
+  display: flex;
+
+  section {
+    width: 100%;
+    background-color: red;
+  }
 }
