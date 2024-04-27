@@ -1,0 +1,68 @@
+<main [ngClass]="{'toggle': toggleNavigation}">
+    <aside class="toogle">
+        <i
+            class="pi"
+            [ngClass]="{'pi-arrow-left': toggleNavigation, 'pi-arrow-right': !toggleNavigation}"
+            (click)="toggleNavigation = !toggleNavigation"
+        ></i>
+    </aside>
+
+    <header>
+        <aside>
+            <img>
+            <strong>Editar</strong>
+        </aside>
+
+        <aside>
+            <strong>
+                Henrique Nunes
+            </strong>
+            <small>
+                nunesdealmeidahenrique.com
+            </small>
+        </aside>
+    </header>
+
+    <section id="navigation">
+        <ul class="item">
+            @for (item of navigationItems; track $index) {
+                <li class="item" [ngClass]="{'has-subItem': show && item?.subItem, 'no-item': show && !item?.subItem}">
+                    <div class="icon">
+                        <i class="pi {{ item.icon }}"></i>
+                    </div>
+
+                    <strong>
+                        {{ item.title }}
+                        @if (item?.subItem) {
+                            <span (click)="show = !show"> V </span>
+                        }
+
+                    </strong>
+                </li>
+
+                @if (show && item?.subItem) {
+                    <ul class="subItem">
+                        @for (subItem of item.subItem; track $index) {
+                            <li class="subItem">
+                               <b>{{ subItem.title }}</b>
+
+                                <div>
+                                    @for (subTitleItem of subItem.subTitle; track $index) {
+                                        <span> {{ subTitleItem.title }}</span>
+                                    }
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                }
+            }
+        </ul>
+    </section>
+
+    <footer>
+        <strong>
+            Sair
+            <i class="pi pi-sign-out"></i>
+        </strong>
+    </footer>
+</main>

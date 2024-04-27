@@ -1,0 +1,34 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  display: initial;
+  display: block;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+
+p,
+figure {
+  margin-block: 0;
+  margin-inline: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: content-box !important;
+}
+
+ul {
+  display: block;
+  list-style-type: none;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
