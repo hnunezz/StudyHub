@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ActivatedRoute, Router, Routes } from '@angular/router';
+import { Component, Inject, inject, output, signal } from '@angular/core';
 import { NavigationItem } from '../../models/navigation-item';
 import { CommonModule } from '@angular/common';
 
@@ -12,6 +13,11 @@ import { CommonModule } from '@angular/common';
     styleUrl: './navigation.component.scss'
 })
 export class NavigationComponent {
+    path = output<string>();
+
+    show: boolean = false;
+    toggleNavigation: boolean = false;
+
     navigationItems: NavigationItem[] = [
         {
             icon: "pi-sitemap",
@@ -86,6 +92,10 @@ export class NavigationComponent {
         },
     ]
 
-    show: boolean = false
-    toggleNavigation: boolean = false
+    handleNavigate(route: string) {
+        if (!route) { return console.error("Path Empty") }
+
+        this.path.emit(route);
+    }
+
 }

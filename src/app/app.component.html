@@ -1,5 +1,5 @@
 <main>
-  <app-navigation></app-navigation>
+  <app-navigation (path)="navigateTo($event)"></app-navigation>
 
   <section>
       <router-outlet></router-outlet>
