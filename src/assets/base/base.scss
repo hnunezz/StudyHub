@@ -32,3 +32,21 @@ ul {
   margin-inline-end: 0px;
   padding-inline-start: 0px;
 }
+
+h2 {
+    margin: 0;
+}
+
+
+h2.page-title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 18px;
+    color: var(--gray-700);
+
+    > small {
+        font-size: 14px;
+        color: var(--primary);
+    }
+}

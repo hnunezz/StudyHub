@@ -1,1 +1,62 @@
-<p>profile works!</p>
+<main>
+    <h2 class="page-title">
+        Editar perfil
+
+        <small> Henrique Nunes </small>
+    </h2>
+
+    <section>
+        <div class="user-info">
+            <div class="change-profile-picture">
+                <div class="img"></div>
+                <span> Alterar foto do perfil</span>
+            </div>
+
+            <div class="change-name-actions">
+                <span>
+                    Henrique Nunes
+                    <small> Editar nome </small>
+                </span>
+
+                <div class="actions">
+                    <button>Salvar</button>
+                    <button>Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="form">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Senha">
+            &nbsp;
+            <input type="text" placeholder="CPF">
+            <input type="text" placeholder="RG">
+            <input type="text" placeholder="Telefone">
+        </div>
+
+        <hr />
+
+        <div class="user-preferences">
+            <strong> Preferências </strong>
+            <div class="theme-language">
+                <div class="theme">
+                    <small> Visualização </small>
+                    <div class="switch-button">
+                        <i class="pi pi-sun" [ngClass]="{ 'active-light': !themeToggle }"></i>
+
+                        <label class="switch">
+                            <input type="checkbox" checked [(ngModel)]="themeToggle">
+                            <span class="slider round"></span>
+                        </label>
+
+                        <i class="pi pi-moon" [ngClass]="{ 'active-dark': themeToggle }" style="font-size: 30px"></i>
+                    </div>
+                </div>
+                <div class="language">
+                    <small> Idioma </small>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

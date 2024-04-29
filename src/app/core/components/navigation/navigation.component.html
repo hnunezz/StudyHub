@@ -2,8 +2,8 @@
     <aside class="toogle">
         <i
             class="pi"
-            [ngClass]="{'pi-arrow-left': toggleNavigation, 'pi-arrow-right': !toggleNavigation}"
-            (click)="toggleNavigation = !toggleNavigation"
+            [ngClass]="{'pi-arrow-right': toggleNavigation, 'pi-arrow-left': !toggleNavigation}"
+            (click)="handleNavigation()"
         ></i>
     </aside>
 
@@ -34,7 +34,13 @@
                     <strong>
                         {{ item.title }}
                         @if (item?.subItem) {
-                            <span (click)="show = !show"> V </span>
+                            <span (click)="show = !show">
+                                @if (show) {
+                                    <i class="pi pi-angle-up"></i>
+                                } @else {
+                                    <i class="pi pi-angle-down"></i>
+                                }
+                            </span>
                         }
 
                     </strong>

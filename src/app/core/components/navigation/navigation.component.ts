@@ -98,4 +98,9 @@ export class NavigationComponent {
         this.path.emit(route);
     }
 
+    handleNavigation() {
+        this.show = false;
+        this.toggleNavigation = !this.toggleNavigation
+    }
+
 }
