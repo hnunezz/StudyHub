@@ -75,12 +75,12 @@ main {
             gap: 12px;
 
             strong {
-                color: #383838;
+                color: var(--vd-gray);
                 font-size: 20px;
             }
 
             small {
-                color: #383838;
+                color: var(--vd-gray);
                 font-size: 14px;
                 padding-left: 6px;
             }
@@ -102,7 +102,7 @@ main {
                         i {
                             font-size: 32px;
                             transition: ease-out 0.3s;
-                            color: #383838;
+                            color: #575757;
 
                             //!DarkMode
                             &.active-dark {

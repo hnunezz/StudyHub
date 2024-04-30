@@ -1,12 +1,14 @@
-* {
+:root {
     --primary: #f2653a;
-    --electric-violet: oklch(53.18% 0.28 296.97);
-    --french-violet: oklch(47.66% 0.246 305.88);
-    --vivid-pink: oklch(69.02% 0.277 332.77);
-    --hot-red: oklch(61.42% 0.238 15.34);
-    --orange-red: oklch(63.32% 0.24 31.68);
+    --secondary: #24fedc;
 
-    --gray-900: oklch(19.37% 0.006 300.98);
+    --white: white;
+
+    --vd-gray: #383838;
+
     --gray-700: #656565;
+    --bg-dark: #202020;
+    --bg-light: white;
+
     --gray-400: oklch(70.9% 0.015 304.04);
 }

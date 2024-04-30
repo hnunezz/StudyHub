@@ -45,7 +45,7 @@
                         <i class="pi pi-sun" [ngClass]="{ 'active-light': !themeToggle }"></i>
 
                         <label class="switch">
-                            <input type="checkbox" checked [(ngModel)]="themeToggle">
+                            <input type="checkbox" checked [(ngModel)]="themeToggle" (click)="toggleTheme()" >
                             <span class="slider round"></span>
                         </label>
 

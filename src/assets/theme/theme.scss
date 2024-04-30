@@ -1,0 +1,16 @@
+body.theme-dark {
+    background-color: var(--bg-dark);
+    color: #ffffff;
+
+    --primary: #24fedc;
+    --secondary: #f2653a;
+    --gray-700: white;
+
+    div.user-preferences {
+        --vd-gray: white !important;
+    }
+}
+
+.theme-ligth {
+    background-color: var(--bg-light);
+}
