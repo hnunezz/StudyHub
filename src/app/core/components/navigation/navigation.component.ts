@@ -1,5 +1,5 @@
 import { ActivatedRoute, Router, Routes } from '@angular/router';
-import { Component, Inject, inject, output, signal } from '@angular/core';
+import { Component, Inject, Output, inject, input, output, signal } from '@angular/core';
 import { NavigationItem } from '../../models/navigation-item';
 import { CommonModule } from '@angular/common';
 
@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
     styleUrl: './navigation.component.scss'
 })
 export class NavigationComponent {
-    path = output<string>();
+    pathEmitter = output<string>();
 
     show: boolean = false;
     toggleNavigation: boolean = false;
@@ -95,7 +95,7 @@ export class NavigationComponent {
     handleNavigate(route: string) {
         if (!route) { return console.error("Path Empty") }
 
-        this.path.emit(route);
+        this.pathEmitter.emit(route);
     }
 
     handleNavigation() {
