@@ -3,11 +3,6 @@ export enum Theme {
     LIGHT = 'Light',
 }
 
-export const ThemeToLabel = new Map<Theme, string>([
-    [Theme.DARK, 'Dark'],
-    [Theme.LIGHT, 'Light'],
-]);
-
 export const LabelToTheme = new Map<string, Theme>([
     ['Dark', Theme.DARK,],
     ['Light', Theme.LIGHT],

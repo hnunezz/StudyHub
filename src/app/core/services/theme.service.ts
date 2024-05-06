@@ -1,30 +1,24 @@
-import { Injectable } from '@angular/core';
-import { BooleanToTheme, Theme, getThemesList } from '../enums/theme';
+import { Injectable, signal } from '@angular/core';
 import { StorageKeys } from '../enums/storage-keys';
+import { Theme } from '../enums/theme';
 
 @Injectable({
     providedIn: 'root'
 })
 export class ThemeService {
 
-    private currentTheme: Theme = Theme.LIGHT;
+    toggleModeSignal = signal<Theme>(Theme.LIGHT);
 
+    setTheme(themeValue: Theme) {
 
-    get getTheme(): Theme {
-        return this.currentTheme;
-    }
+        this.toggleModeSignal.update((t) => (t = themeValue));
+        localStorage.setItem(StorageKeys.THEME_KEY, themeValue);
 
-    setTheme(themeValue: boolean) {
-        const theme = BooleanToTheme.get(themeValue) as Theme;
-        this.currentTheme = theme;
-
-        localStorage.setItem(StorageKeys.THEME_KEY, theme);
-
-        const actualTheme = document.body.classList.item(0)
+        const actualTheme = document.body.classList.item(0);
         if (actualTheme) {
-            document.body.classList.remove(actualTheme)
+            document.body.classList.remove(actualTheme);
         }
 
-        document.body.classList.toggle(`theme-${theme.toLowerCase()}`)
+        document.body.classList.toggle(`theme-${themeValue.toLowerCase()}`);
     }
 }
