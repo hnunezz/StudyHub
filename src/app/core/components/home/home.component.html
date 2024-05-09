@@ -1,1 +1,27 @@
-<p>home works!</p>
+<main>
+    <strong>
+        Olá! Bem Vindo Henrique Nunes
+        <small> Hoje é <b>{{ week_day }}</b> dia {{ day }} de {{ month }} de {{ year }} </small>
+    </strong>
+
+    <div>
+        <p> Como você está se sentindo <b>hoje</b>?</p>
+        <div class="feelings-emoji">
+            @for (item of emotionsList; track $index; ) {
+                <svg
+                    width="64"
+                    height="64"
+                    [ngClass]="{'active': item.active}"
+                    (click)="setEmotionDay($index)"
+                >
+                    <use [attr.xlink:href]="item.path" />
+                </svg>
+            }
+        </div>
+        <strong [style.color]="emotionTitle[1]"> {{ emotionTitle[0] }} </strong>
+    </div>
+
+    <hr/>
+
+  &nbsp;
+</main>
