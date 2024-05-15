@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { StorageKeys } from '../../enums/storage-keys';
+import { StorageKeys } from '../../../shared/enums/storage-keys';
 
 const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 const weekDays = ["Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado"];
@@ -13,10 +13,10 @@ const weekDays = ["Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quint
     styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit{
-    week_day
-    day
-    month
-    year
+    week_day: string;
+    day: number;
+    month: string;
+    year: number;
 
     emotionTitle: [string, string] = [" _ ", ""];
     emotionsList = [

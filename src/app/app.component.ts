@@ -2,9 +2,9 @@ import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit, inject } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './core/components/navigation/navigation.component';
-import { StorageKeys } from './core/enums/storage-keys';
-import { LabelToTheme, Theme } from './core/enums/theme';
-import { ThemeService } from './core/services/theme.service';
+import { StorageKeys } from './shared/enums/storage-keys';
+import { LabelToTheme, Theme } from './shared/enums/theme';
+import { ThemeService } from './shared/services/theme.service';
 
 @Component({
     selector: 'app-root',

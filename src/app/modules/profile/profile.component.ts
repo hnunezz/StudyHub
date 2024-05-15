@@ -1,33 +1,35 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, OnChanges, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BooleanToTheme, ThemeToBoolean } from '../../core/enums/theme';
-import { ThemeService } from '../../core/services/theme.service';
+import { BooleanToTheme, ThemeToBoolean } from '../../shared/enums/theme';
+import { SwitchComponent } from '../../switch/switch.component';
+import { ThemeService } from '../../shared/services/theme.service';
 
 @Component({
     selector: 'app-profile',
     standalone: true,
     imports: [
         CommonModule,
-        FormsModule
+        FormsModule,
+        SwitchComponent
     ],
     templateUrl: './profile.component.html',
     styleUrl: './profile.component.scss'
 })
-export class ProfileComponent {
+export class ProfileComponent{
     private themeService = inject(ThemeService);
-    themeToggle: boolean = false;
+    themeValue: boolean;
 
     constructor() {
-        this.themeToggle = ThemeToBoolean
+        this.themeValue = ThemeToBoolean
             .get(this.themeService
                 .toggleModeSignal()) as boolean;
     }
 
-    toggleTheme() {
-        this.themeToggle = !this.themeToggle
+    toggleTheme(event: boolean) {
+        this.themeValue = event
         this.themeService
             .setTheme(BooleanToTheme
-                .get(this.themeToggle));
+                .get(this.themeValue));
     }
 }
