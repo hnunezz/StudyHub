@@ -26,13 +26,22 @@
     <section id="navigation">
         <ul class="item">
             @for (item of navigationItems; track $index) {
-                <li class="item" [ngClass]="{'has-subItem': show && item?.subItem, 'no-item': show && !item?.subItem}">
+                <li
+                    class="item"
+                    [ngClass]="{
+                        'has-subItem': show && item?.subItem,
+                        'no-item': show && !item?.subItem,
+                        'active': actualItem === item.path
+                    }"
+                    (click)="handleNavigate(item.path)"
+                >
                     <div class="icon">
                         <i class="pi {{ item.icon }}"></i>
                     </div>
 
-                    <strong>
+                    <strong >
                         {{ item.title }}
+
                         @if (item?.subItem) {
                             <span (click)="show = !show">
                                 @if (show) {

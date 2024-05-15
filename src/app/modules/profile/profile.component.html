@@ -1,4 +1,4 @@
-<main>
+<main class="base-container">
     <h2 class="page-title">
         Editar perfil
 
@@ -45,6 +45,7 @@
                         <i class="pi pi-sun" [ngClass]="{ 'active-light': !themeValue }"></i>
 
                         <app-switch
+                            [theme]="true"
                             [model]="themeValue"
                             (onClick)="toggleTheme($event)"
                         ></app-switch>

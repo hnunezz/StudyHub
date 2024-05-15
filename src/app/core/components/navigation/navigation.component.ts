@@ -17,6 +17,7 @@ export class NavigationComponent {
 
     show: boolean = false;
     toggleNavigation: boolean = false;
+    actualItem: string = "";
 
     navigationItems: NavigationItem[] = [
         {
@@ -27,7 +28,7 @@ export class NavigationComponent {
         {
             icon: "pi-list",
             title: "Painel",
-            path: "Painel"
+            path: "Painel",
         },
         {
             icon: "pi-users",
@@ -39,11 +40,11 @@ export class NavigationComponent {
                     subTitle: [
                         {
                             title: "Alunos/Professores",
-                            path: "Alunos/Professores"
+                            path: "Alunos/Professores",
                         },
                         {
                             title: "Administrativo",
-                            path: "Administrativo"
+                            path: "Administrativo",
                         }
                     ]
                 },
@@ -52,19 +53,19 @@ export class NavigationComponent {
                     subTitle: [
                         {
                             title: "Aula",
-                            path: "Aula"
+                            path: "Aula",
                         },
                         {
                             title: "Módulo",
-                            path: "Módulo"
+                            path: "Módulo",
                         },
                         {
                             title: "Curso/Plano",
-                            path: "Curso/Plano"
+                            path: "Curso/Plano",
                         },
                         {
                             title: "Turma",
-                            path: "Turma"
+                            path: "Turma",
                         },
                     ]
                 }
@@ -73,29 +74,31 @@ export class NavigationComponent {
         {
             icon: "pi-video",
             title: "Aula ao vivo",
-            path: "Aula ao vivo"
+            path: "Aula ao vivo",
         },
         {
             icon: "pi-cog",
             title: "Configurações",
-            path: "Configurações"
+            path: "Configurações",
         },
         {
             icon: "pi-wrench",
             title: "Suporte",
-            path: "Suporte"
+            path: "Suporte",
         },
         {
             icon: "pi-file",
             title: "Notas de Atualizações",
-            path: "Notas de Atualizações"
+            path: "release-notes",
         },
     ]
 
     handleNavigate(route: string) {
         if (!route) { return console.error("Path Empty") }
 
+
         this.pathEmitter.emit(route);
+        this.actualItem = route;
     }
 
     handleNavigation() {

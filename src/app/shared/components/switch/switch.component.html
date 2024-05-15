@@ -1,9 +1,12 @@
-<label class="switch">
+<label
+    class="switch"
+    [ngClass]="{'dark-light-mode': theme}"
+>
     <input
         type="checkbox"
         checked
         [(ngModel)]="model"
         (ngModelChange)="onClickHandle()"
     >
-    <span class="slider round"></span>
+    <span class="slider"></span>
 </label>

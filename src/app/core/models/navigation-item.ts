@@ -7,5 +7,5 @@ export interface NavigationItem {
 
 export interface NavigationSubItem {
     title: string;
-    subTitle: { title: string; path: string }[];
+    subTitle: { title: string; path: string,}[];
 }
