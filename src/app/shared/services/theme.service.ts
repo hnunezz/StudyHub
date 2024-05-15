@@ -11,7 +11,6 @@ export class ThemeService {
     toggleModeSignal = signal<Theme>(Theme.LIGHT);
 
     setTheme(themeValue: Theme) {
-
         this.toggleModeSignal.update((t) => (t = themeValue));
         localStorage.setItem(StorageKeys.THEME_KEY, themeValue);
 
