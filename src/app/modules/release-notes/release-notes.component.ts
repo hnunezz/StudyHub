@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { releaseNotesData } from '../../../assets/data/mocks';
 
 @Component({
   selector: 'app-release-notes',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './release-notes.component.scss'
 })
 export class ReleaseNotesComponent {
+    @Input() home: boolean = false;
 
+    releaseNotesData = releaseNotesData;
 }

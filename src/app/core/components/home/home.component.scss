@@ -2,9 +2,11 @@ main {
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 2fr 0fr 2fr;
+    grid-template-rows: 2fr 2fr 1fr 2fr;
     gap: 0px 0px;
     align-items: center;
+    overflow: auto;
+    margin-left: 20px;
 
     --c1: #e42221;
     --c2: #ea631f;
@@ -145,6 +147,12 @@ main {
         strong {
             font-size: 20px;
         }
+    }
+
+    .relase-section {
+        display: block;
+        height: 200px;
+
     }
 }
 

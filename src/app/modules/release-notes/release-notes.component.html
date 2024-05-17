@@ -1,14 +1,49 @@
 <main class="base-container">
-    <h2 class="page-title"> Notas de Atualizações </h2>
+    @if (!home) {
+        <h2 class="page-title"> Notas de Atualizações </h2>
+    }
 
     <section>
-        <div class="search">
-            <h3> Pesquise por versão</h3>
-            <input type="text" placeholder="Pesquisar">
-        </div>
+        @if (!home) {
+            <div class="search">
+                <h3> Pesquise por versão</h3>
+                <input type="text" placeholder="Pesquisar">
+            </div>
+        }
 
         <div class="release-notes">
+            @if (!home) {
+                <header>
+                    <strong> Data:
+                        <span> {{ releaseNotesData.releaseDate }} </span>
+                    </strong>
+                    <strong> Versão:
+                        <span> v{{releaseNotesData.releaseVersion}} </span>
+                    </strong>
+                </header>
 
+                <hr>
+            }
+
+            <ul class="main-list">
+                @for (release of releaseNotesData.releases; track $index) {
+
+                    <li class="item">
+                        <strong> Versão v{{release.version}} - {{release.date}}
+                            <span>Mudanças:</span>
+                        </strong>
+                        <ul>
+                            @for (item of release.changes; track $index) {
+                                <li>
+                                    {{ item.title }}
+                                </li>
+                            }
+                        </ul>
+
+                        <hr>
+                    </li>
+                }
+            </ul>
         </div>
     </section>
 </main>

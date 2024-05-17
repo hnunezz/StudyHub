@@ -1,0 +1,95 @@
+main {
+    section {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            &.search {
+                margin: 24px 0;
+
+                h3 {
+                    margin: 0;
+                    color: #656565;
+                    font-size: 14px;
+                }
+            }
+
+            &.release-notes {
+                width: 60%;
+                max-width: 60%;
+                height: 80%;
+                border-radius: 8px;
+                border: 2px solid #656565;
+
+                header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 8px 12px;
+
+                    strong {
+                        font-size: 16px;
+                        span {
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                hr {
+                    margin: 1px 8%;
+                    height: 1px;
+                    color: #dadada;
+                    background: #dadada;
+                    font-size: 0;
+                    border: 0;
+                }
+
+                ul.main-list {
+                    max-height: 90%;
+                    overflow: auto;
+                    margin-left: 20px;
+
+                    li.item {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 24px 0px;
+                        margin: 0 34px;
+                        border-bottom: 1px solid #dadada;
+
+                        strong {
+                            display: flex;
+                            flex-direction: column;
+                            font-size: 18px;
+
+                            span {
+                                font-weight: 600;
+                                font-size: 14px;
+                                color: #656565;
+                            }
+                        }
+
+                        > ul {
+                            display: block;
+                            list-style: disc;
+
+                            li {
+                                &::marker {
+                                    color: var(--primary);
+                                }
+                            }
+                        }
+
+                        &:last-child {
+                            border: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

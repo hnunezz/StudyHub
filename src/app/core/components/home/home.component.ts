@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { StorageKeys } from '../../../shared/enums/storage-keys';
+import { ReleaseNotesComponent } from '../../../modules/release-notes/release-notes.component';
 
 const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 const weekDays = ["Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado"];
@@ -8,7 +9,10 @@ const weekDays = ["Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quint
 @Component({
     selector: 'app-home',
     standalone: true,
-    imports: [CommonModule],
+    imports: [
+        CommonModule,
+        ReleaseNotesComponent
+    ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'
 })
