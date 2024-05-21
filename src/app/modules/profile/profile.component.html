@@ -26,12 +26,12 @@
         </div>
 
         <div class="form">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Senha">
+            <app-input-text placeholder="Email"></app-input-text>
+            <app-input-text placeholder="Senha" [password]="true"></app-input-text>
             &nbsp;
-            <input type="text" placeholder="CPF">
-            <input type="text" placeholder="RG">
-            <input type="text" placeholder="Telefone">
+            <app-input-text placeholder="CPF" [disabled]="true"></app-input-text>
+            <app-input-text placeholder="RG" [disabled]="true"></app-input-text>
+            <app-input-text placeholder="Telefone"></app-input-text>
         </div>
 
         <hr />

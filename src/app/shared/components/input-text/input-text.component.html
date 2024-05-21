@@ -1,0 +1,19 @@
+<section>
+    <input
+        [ngClass]="{'password': password, 'toogle': passwordToggled}"
+        type="text"
+        [disabled]="disabled"
+        [placeholder]="placeholder"
+        [(ngModel)]="model"
+        (ngModelChange)="onChange"
+        (blur)="onBlur"
+    >
+
+    @if (password) {
+        @if (passwordToggled) {
+            <i class="pi pi-eye" (click)="togglePassword()"></i>
+        } @else {
+            <i class="pi pi-eye-slash" (click)="togglePassword()"></i>
+        }
+    }
+</section>

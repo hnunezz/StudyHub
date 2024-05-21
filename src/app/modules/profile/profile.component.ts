@@ -5,13 +5,15 @@ import { BooleanToTheme, ThemeToBoolean } from '../../shared/enums/theme';
 import { ComponentsModule } from '../../shared/modules/components/components.module';
 import { SwitchComponent } from '../../shared/components/switch/switch.component';
 import { ThemeService } from '../../shared/services/theme.service';
+import { InputTextComponent } from '../../shared/components/input-text/input-text.component';
 
 @Component({
     selector: 'app-profile',
     standalone: true,
     imports: [
         ComponentsModule,
-        SwitchComponent
+        SwitchComponent,
+        InputTextComponent
     ],
     templateUrl: './profile.component.html',
     styleUrl: './profile.component.scss'
