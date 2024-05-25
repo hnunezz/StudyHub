@@ -28,7 +28,25 @@ export class NavigationComponent {
         {
             icon: "pi-list",
             title: "Painel",
-            path: "Painel",
+            subItem: [
+                {
+                    title: "",
+                    subTitle: [
+                        {
+                            title: "Alunos",
+                            path: "",
+                        },
+                        {
+                            title: "Professores",
+                            path: "",
+                        },
+                        {
+                            title: "Administrativo",
+                            path: "",
+                        }
+                    ]
+                },
+            ]
         },
         {
             icon: "pi-users",

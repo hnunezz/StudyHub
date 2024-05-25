@@ -1,6 +1,10 @@
-
 <section>
-    &nbsp;
+    @if (!isAdministrativeView) {
+        <app-switch
+        ></app-switch>
+    } @else {
+        &nbsp;
+    }
 
     <div>
         <app-button [label]="'Salvar'" [icon]="'save'"></app-button>
@@ -11,6 +15,16 @@
 <hr>
 
 <!--future form!!!-->
-<div>
-
+<div class="form">
+    <app-input-text placeholder="Nome"></app-input-text>
+    <app-input-text placeholder="Telefone"></app-input-text>
+    <app-input-text placeholder="CPF"></app-input-text>
+    <app-input-text placeholder="RG"></app-input-text>
+    <app-input-text placeholder="Email"></app-input-text>
+    <app-input-text placeholder="Senha"></app-input-text>
+    &nbsp;
+    @if (isAdministrativeView) {
+        <p>.--.</p>
+        <app-input-text placeholder="Tipo de usuário"></app-input-text>
+    }
 </div>

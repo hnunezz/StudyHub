@@ -4,4 +4,23 @@
 
         <small> Aluno/Professor </small>
     </h2>
+
+    <app-principal-form [type]="'student-teacher'"></app-principal-form>
+
+    <hr>
+
+    <div class="form-address">
+        <app-input-text placeholder="CEP"></app-input-text>
+        &nbsp;
+        <p>.</p>
+        <app-input-text placeholder="Rua" [disabled]="true"></app-input-text>
+        <app-input-text placeholder="Número"></app-input-text>
+        &nbsp;
+        <app-input-text placeholder="Bairro" [disabled]="true"></app-input-text>
+        <app-input-text placeholder="Cidade" [disabled]="true"></app-input-text>
+        <app-input-text placeholder="Complemento"></app-input-text>
+        <app-input-text placeholder="País" [disabled]="true"></app-input-text>
+        <app-input-text placeholder="Estado" [disabled]="true"></app-input-text>
+    </div>
+
 </main>
