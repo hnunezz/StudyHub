@@ -1,4 +1,5 @@
 body.theme-dark {
+    transition: ease 0.3s;
     background-color: var(--bg-dark);
     color: #ffffff;
 
@@ -12,5 +13,6 @@ body.theme-dark {
 }
 
 body.theme-ligth {
+    transition: ease 0.3s;
     background-color: var(--bg-light);
 }

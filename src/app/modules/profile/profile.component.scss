@@ -47,6 +47,12 @@ main {
                         color: var(--primary);
                     }
                 }
+
+                div.actions {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                }
             }
         }
 

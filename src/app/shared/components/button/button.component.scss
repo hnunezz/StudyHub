@@ -1,0 +1,49 @@
+button {
+    &.primary {
+        --selected: #0ebaa1;
+        --selected_hover: rgb(14 186 161 / 36%);
+    }
+    &.secondary {
+        --selected: #BA0E0E;
+        --selected_hover: rgb(186 14 14 / 36%);
+    }
+
+
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid var(--selected);
+    background: var(--selected);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    transition: ease-out 0.3s;
+    opacity: 1;
+    cursor: default;
+    box-shadow: 0px 0px 3px 2px transparent;
+
+
+
+    span {
+        font-size: 14px;
+        font-weight: 600;
+        font-family: "Inter", sans-serif;
+    }
+
+    i {
+        font-size: 16px;
+    }
+
+    &:hover {
+        transition: ease 0.3s;
+        box-shadow: 0px 0px 6px 4px var(--selected_hover);
+        cursor: pointer;
+    }
+
+    &:focus {
+        transition: ease 0.3s;
+        opacity: 0.8;
+    }
+}

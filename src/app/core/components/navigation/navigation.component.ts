@@ -33,18 +33,17 @@ export class NavigationComponent {
         {
             icon: "pi-users",
             title: "Cadastro",
-            path: "Cadastro",
             subItem: [
                 {
                     title: "Usuário",
                     subTitle: [
                         {
                             title: "Alunos/Professores",
-                            path: "Alunos/Professores",
+                            path: "students-teachers",
                         },
                         {
                             title: "Administrativo",
-                            path: "Administrativo",
+                            path: "administrative",
                         }
                     ]
                 },
@@ -94,7 +93,7 @@ export class NavigationComponent {
     ]
 
     handleNavigate(route: string) {
-        if (!route) { return console.error("Path Empty") }
+        if (!route) { return }
 
 
         this.pathEmitter.emit(route);

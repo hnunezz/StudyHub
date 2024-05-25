@@ -63,7 +63,12 @@
 
                                 <div>
                                     @for (subTitleItem of subItem.subTitle; track $index) {
-                                        <span> {{ subTitleItem.title }}</span>
+                                        <span
+                                            [ngClass]="{'active': actualItem === subTitleItem.path}"
+                                            (click)="handleNavigate(subTitleItem.path)"
+                                        >
+                                            {{ subTitleItem.title }}
+                                        </span>
                                     }
                                 </div>
                             </li>

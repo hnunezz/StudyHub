@@ -6,6 +6,7 @@ import { ComponentsModule } from '../../shared/modules/components/components.mod
 import { SwitchComponent } from '../../shared/components/switch/switch.component';
 import { ThemeService } from '../../shared/services/theme.service';
 import { InputTextComponent } from '../../shared/components/input-text/input-text.component';
+import { ButtonComponent } from '../../shared/components/button/button.component';
 
 @Component({
     selector: 'app-profile',
@@ -13,12 +14,13 @@ import { InputTextComponent } from '../../shared/components/input-text/input-tex
     imports: [
         ComponentsModule,
         SwitchComponent,
-        InputTextComponent
+        InputTextComponent,
+        ButtonComponent
     ],
     templateUrl: './profile.component.html',
     styleUrl: './profile.component.scss'
 })
-export class ProfileComponent{
+export class ProfileComponent {
     private themeService = inject(ThemeService);
     themeValue: boolean;
 

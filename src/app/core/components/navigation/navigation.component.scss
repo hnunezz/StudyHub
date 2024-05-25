@@ -190,6 +190,11 @@ main {
                                 cursor: pointer;
                                 color: var(--primary);
                             }
+
+                            &.active {
+                                transition: ease 0.3s;
+                                color: var(--primary);
+                            }
                         }
                     }
 
