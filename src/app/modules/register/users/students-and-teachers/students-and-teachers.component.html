@@ -5,7 +5,7 @@
         <small> Aluno/Professor </small>
     </h2>
 
-    <app-principal-form [type]="'student-teacher'"></app-principal-form>
+    <app-principal-form [type]="'student-teacher'" (typeUserToggle)="setTypeUser($event)"></app-principal-form>
 
     <hr>
 
@@ -22,5 +22,14 @@
         <app-input-text placeholder="País" [disabled]="true"></app-input-text>
         <app-input-text placeholder="Estado" [disabled]="true"></app-input-text>
     </div>
+
+    @if(!isTeacherView) {
+        <hr>
+
+        <div class="search">
+            <h3> Adicionar a uma turma </h3>
+            <input type="text" placeholder="Pesquisar">
+        </div>
+    }
 
 </main>

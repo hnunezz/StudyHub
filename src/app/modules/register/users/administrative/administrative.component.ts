@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PrincipalFormComponent } from '../common/principal-form/principal-form.component';
+import { PrincipalFormComponent } from '../principal-form/principal-form.component';
 import { CommonModule } from '@angular/common';
 
 @Component({

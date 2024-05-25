@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { releaseNotesData } from '../../../assets/data/mocks';
+import { releaseNotesData } from '../../../assets/data/release-notes';
 
 @Component({
   selector: 'app-release-notes',

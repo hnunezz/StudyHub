@@ -1,0 +1,56 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 20px;
+
+    > div {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    div.switch-button {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        span {
+            transition: ease-out 0.3s;
+            color: #575757;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            i {
+                transition: ease-out 0.3s;
+                font-size: 18px;
+            }
+
+            &.active {
+                transition: ease 0.3s;
+                color: var(--primary);
+            }
+        }
+    }
+}
+
+hr {
+    margin: 20px 10%;
+    height: 1px;
+    color: rgba(0, 0, 0, 0.36);
+    background: rgba(0, 0, 0, 0.36);
+    font-size: 0;
+    border: 0;
+}
+
+div.form {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 32px 16px;
+}

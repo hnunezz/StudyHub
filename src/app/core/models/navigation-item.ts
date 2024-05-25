@@ -2,6 +2,7 @@ export interface NavigationItem {
     icon: string;
     title: string;
     path?: string;
+    active?: boolean;
     subItem?: NavigationSubItem[];
 }
 

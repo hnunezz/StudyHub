@@ -43,8 +43,8 @@
                         {{ item.title }}
 
                         @if (item?.subItem) {
-                            <span (click)="show = !show">
-                                @if (show) {
+                            <span (click)="toogleSubItems(item)">
+                                @if (item.active) {
                                     <i class="pi pi-angle-up"></i>
                                 } @else {
                                     <i class="pi pi-angle-down"></i>
@@ -55,7 +55,7 @@
                     </strong>
                 </li>
 
-                @if (show && item?.subItem) {
+                @if (item.active && item?.subItem) {
                     <ul class="subItem">
                         @for (subItem of item.subItem; track $index) {
                             <li class="subItem">

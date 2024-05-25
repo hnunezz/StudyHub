@@ -1,7 +1,20 @@
 <section>
     @if (!isAdministrativeView) {
-        <app-switch
-        ></app-switch>
+        <div class="switch-button">
+            <span [ngClass]="{ 'active': !typeUserValue }">
+                <i class="pi pi-graduation-cap"></i>
+                Aluno
+            </span>
+
+            <app-switch
+                (onClick)="toggleTypeUser($event)"
+            ></app-switch>
+
+            <span [ngClass]="{ 'active': typeUserValue }">
+                Professor
+                <i class="pi pi-book"></i>
+            </span>
+        </div>
     } @else {
         &nbsp;
     }
