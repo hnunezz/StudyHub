@@ -11,5 +11,5 @@ import { releaseNotesData } from '../../../assets/data/release-notes';
 export class ReleaseNotesComponent {
     @Input() home: boolean = false;
 
-    releaseNotesData = releaseNotesData;
+    releaseNotesData = releaseNotesData;  //? MOCK!
 }

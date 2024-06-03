@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { PrincipalFormComponent } from '../principal-form/principal-form.component';
 import { InputTextComponent } from '../../../../shared/components/input-text/input-text.component';
+import { classList } from '../../../../../assets/data/class';
+import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'app-students-and-teachers',
@@ -9,12 +11,14 @@ import { InputTextComponent } from '../../../../shared/components/input-text/inp
     imports: [
         CommonModule,
         PrincipalFormComponent,
-        InputTextComponent
+        InputTextComponent,
+        FormsModule
     ],
     templateUrl: './students-and-teachers.component.html',
     styleUrl: './students-and-teachers.component.scss'
 })
 export class StudentsAndTeachersComponent {
+    classList = classList; //? MOCK!
     isTeacherView: boolean = false;
 
     setTypeUser(event: boolean) {

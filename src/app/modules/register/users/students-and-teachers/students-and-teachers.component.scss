@@ -11,7 +11,6 @@ hr {
     border: 0;
 }
 
-
 div.form-address {
     display: grid;
     grid-auto-columns: 1fr;
@@ -20,3 +19,87 @@ div.form-address {
     gap: 32px 16px;
 }
 
+.search {
+    h3 {
+        margin: 0;
+        color: #656565;
+        font-size: 14px;
+    }
+}
+
+section.student-actions {
+    display: flex;
+    gap: 16px;
+
+    div.list {
+        border-radius: 4px;
+        transition: ease-out 0.3s;
+        border: 1px solid #cbd5e1;
+        color: var(--gray-700);
+        margin-top: 17px;
+        width: 40%;
+
+        ul {
+            max-height: 210px;
+            overflow: auto;
+
+            li {
+                height: 50px;
+                padding: 5px;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    padding: 0 10px;
+
+                    height: 100%;
+                    background: var(--white_bg);
+                    border-radius: 8px;
+
+                    strong {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2px;
+                        color: var(--vd-gray);
+
+                        small {
+                            color: var(--vd-gray);
+                            font-size: 10px;
+                        }
+                    }
+
+                    &.active {
+                        background: var(--primary_36);
+
+                        input[type="checkbox"] {
+                            box-sizing: border-box;
+                            padding: 0;
+                            accent-color: var(--primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div.text-area {
+        display: flex;
+        flex-direction: column;
+        width: calc(60% - 16px);
+        strong {
+            color: #656565;
+        }
+
+        textarea {
+            resize: none;
+            height: 200px;
+            outline: none;
+            border-radius: 4px;
+            transition: ease-out 0.3s;
+            border: 1px solid #cbd5e1;
+            color: var(--gray-700);
+            background: transparent;
+        }
+    }
+}

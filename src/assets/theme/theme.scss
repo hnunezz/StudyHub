@@ -4,8 +4,11 @@ body.theme-dark {
     color: #ffffff;
 
     --primary: #24fedc;
+    --primary_36: rgb(36 254 220 / 36%);
     --secondary: #f2653a;
+    --secondary_36: rgba(242, 153, 74, 0.34);
     --gray-700: white;
+    --white_bg: #393939;
 
     div.user-preferences {
         --vd-gray: white !important;

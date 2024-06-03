@@ -26,10 +26,40 @@
     @if(!isTeacherView) {
         <hr>
 
-        <div class="search">
-            <h3> Adicionar a uma turma </h3>
-            <input type="text" placeholder="Pesquisar">
-        </div>
-    }
+            <div class="search">
+                <h3> Adicionar a uma turma </h3>
+                <input type="text" placeholder="Pesquisar">
+            </div>
+
+            <section class="student-actions">
+                <div class="list">
+                    <ul>
+                        @for (class of classList; track $index) {
+                            <li>
+                                <div [ngClass]="{'active': class.selected}">
+                                    <input
+                                        type="checkbox"
+                                        [checked]="class.selected"
+                                        (change)="class.selected = !class.selected"
+                                    >
+                                    <strong>
+                                        {{ class.title }}
+                                        <small>
+                                            {{class.date}}
+                                        </small>
+                                    </strong>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+
+                <div class="text-area">
+                    <strong> Observações </strong>
+                    <textarea></textarea>
+                </div>
+            </section>
+
+        }
 
 </main>

@@ -20,7 +20,7 @@ export class NavigationComponent {
     toggleNavigation: boolean = false;
     actualItem: string = "";
 
-    navigationItems: NavigationItem[] = navigationItems;
+    navigationItems: NavigationItem[] = navigationItems;  //? MOCK!
 
     handleNavigate(route: string) {
         if (!route) { return }
@@ -31,7 +31,8 @@ export class NavigationComponent {
     }
 
     handleNavigation() {
-        this.show = false;
+        this.navigationItems.forEach(item => item.active = false);
+
         this.toggleNavigation = !this.toggleNavigation
     }
 

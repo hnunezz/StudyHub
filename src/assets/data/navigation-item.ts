@@ -4,7 +4,7 @@ export const navigationItems: NavigationItem[] = [
     {
         icon: "pi-sitemap",
         title: "Conteúdo",
-        path: "Conteúdo",
+        path: "content",
     },
     {
         icon: "pi-list",
