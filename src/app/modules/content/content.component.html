@@ -4,43 +4,50 @@
     </h2>
 
     <section>
-        <div>
-            <label>
-                <strong>Aulas (650)</strong>
-                <button>+</button>
-            </label>
-            <input placeholder="Pesquisar">
-            <ul>
-                <li>
-                    <aside>
-                        <strong> Ao Vivo</strong>
-                        <small> Criada em 13/11/2023 </small>
-                    </aside>
-                    <i class="pi pi-ellipsis-h"></i>
-                </li>
-                <li>
-                    <aside>
-                        <strong> Ao Vivo</strong>
-                        <small> Criada em 13/11/2023 </small>
-                    </aside>
-                    <i class="pi pi-ellipsis-h"></i>
-                </li>
-                <li>
-                    <aside>
-                        <strong> Ao Vivo</strong>
-                        <small> Criada em 13/11/2023 </small>
-                    </aside>
-                    <i class="pi pi-ellipsis-h"></i>
-                </li>
-                <li>
-                    <aside>
-                        <strong> Ao Vivo</strong>
-                        <small> Criada em 13/11/2023 </small>
-                    </aside>
-                    <i class="pi pi-ellipsis-h"></i>
-                </li>
-            </ul>
-        </div>
+       @for (content of contentsData; track $index) {
+           <div class="card" (dragover)="onDragOver($event)" (drop)="onDrop($event, content.content)">
+               <label>
+                   <strong>{{ content.title }} ({{ content.items.length }})</strong>
+                   <button>
+                        <i class="pi pi-plus"></i>
+                   </button>
+               </label>
+               <app-search-input></app-search-input>
+               <ul class="main-ul">
+                @for (item of content.items; track $index) {
+                    <li class="main-li" draggable="true" (dragstart)="onDragStart(item, content.content)">
+                        <aside>
+                            <strong> {{ item.title }}</strong>
+                            <small> Criada em {{ item.dateCreated }} </small>
 
+                            @if (item.showClass) {
+                                <div class="classes" [ngClass]="{'showed': item.showClass}">
+                                    <ul>
+                                        @for (class of item.class; track $index) {
+                                            <li>
+                                                <i class="pi pi-youtube"></i>
+                                                <strong> {{class.title}} </strong>
+                                                <i class="pi pi-trash"></i>
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+                            }
+                        </aside>
+                        <div class="flex gap-16">
+                            @if (item.hasClass) {
+                                <i
+                                    class="pi pi-angle-down"
+                                    [ngClass]="{'active': item.showClass}"
+                                    (click)="item.showClass = !item.showClass"
+                                ></i>
+                            }
+                            <i class="pi pi-ellipsis-h"></i>
+                        </div>
+                    </li>
+                }
+               </ul>
+           </div>
+       }
     </section>
 </main>

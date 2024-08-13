@@ -6,7 +6,6 @@
     --secondary: #24fedc;
     --secondary_36: rgb(36 254 220 / 36%);
 
-
     --white: white;
     --white_bg: #f9f9f9;
 
@@ -18,4 +17,13 @@
     --bg-light: white;
 
     --gray-400: oklch(70.9% 0.015 304.04);
+
+    //app-content
+    --bg-content: #e6e6e6;
+    --bg-content_list: white;
+
+    //app-search-input
+    //app-input-text
+    --input-border: #cbd5e1;
+    --input-background: white
 }

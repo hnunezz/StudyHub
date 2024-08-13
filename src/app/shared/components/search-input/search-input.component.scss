@@ -1,0 +1,47 @@
+section {
+    position: relative;
+    input {
+        width: calc(100% - 40px);
+        height: 20px;
+        border-radius: 20px;
+        border: 0;
+        color: var(--gray-700);
+        font-weight: 500;
+        padding: 5px 30px 5px 10px;
+        outline: 0;
+        transition: ease-out 0.3s;
+        border: 1px solid var(--input-border);
+        background: var(--input-background);
+
+        &:hover {
+            transition: ease 0.3s;
+            border-color: var(--primary);
+
+        }
+
+        &:not(:disabled) {
+            &:hover,
+            &:active,
+            &:focus {
+                transition: ease 0.3s;
+                border-color: var(--primary);
+
+            }
+        }
+
+        &:disabled {
+            border: 1px solid #cbd5e159;
+            color: #656565b5;
+        }
+    }
+
+    i {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        font-weight: 600;
+        color: black;
+        color: var(--primary);
+
+    }
+}

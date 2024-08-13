@@ -9,6 +9,10 @@ main {
         div {
             &.search {
                 margin: 24px 0;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                width: 280px;
 
                 h3 {
                     margin: 0;
@@ -50,7 +54,8 @@ main {
 
                 ul.main-list {
                     max-height: 90%;
-                    overflow: auto;
+                    padding-right: 4px;
+                    overflow: scroll;
                     margin-left: 20px;
 
                     li.item {

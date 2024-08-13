@@ -20,6 +20,11 @@ div.form-address {
 }
 
 .search {
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
     h3 {
         margin: 0;
         color: #656565;
@@ -41,7 +46,8 @@ section.student-actions {
 
         ul {
             max-height: 210px;
-            overflow: auto;
+            padding-right: 4px;
+            overflow: scroll;
 
             li {
                 height: 50px;

@@ -70,7 +70,7 @@ main {
                 &:hover {
                     transition: ease 0.3s;
                     cursor: pointer;
-                    color: #f2653aaf;
+                    color: var(--primary_36);
                 }
             }
         }

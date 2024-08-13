@@ -5,7 +5,8 @@ main {
     grid-template-rows: 2fr 2fr 1fr 2fr;
     gap: 0px 0px;
     align-items: center;
-    overflow: auto;
+    padding-right: 4px;
+    overflow: scroll;
     margin-left: 20px;
 
     --c1: #e42221;

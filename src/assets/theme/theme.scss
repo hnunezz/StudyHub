@@ -10,9 +10,17 @@ body.theme-dark {
     --gray-700: white;
     --white_bg: #393939;
 
-    div.user-preferences {
-        --vd-gray: white !important;
-    }
+    //app-content
+    --bg-content: #393939;
+    --bg-content_list: #212121;
+
+    //app-student-and-teachers
+    --vd-gray: white !important;
+
+    //app-search-input
+    //app-input-text
+    --input-border: #a6a6a6;
+    --input-background: transparent;
 }
 
 body.theme-ligth {

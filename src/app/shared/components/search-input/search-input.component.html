@@ -1,0 +1,11 @@
+<section>
+    <input
+        type="text"
+        [disabled]="disabled"
+        [placeholder]="placeholder"
+        [(ngModel)]="model"
+        (ngModelChange)="onChange"
+        (blur)="onBlur"
+    >
+    <i class="pi pi-search"></i>
+</section>
