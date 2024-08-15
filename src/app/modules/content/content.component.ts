@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { contents } from './../../../assets/data/content-item';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SearchInputComponent } from '../../shared/components/search-input/search-input.component';
+import { MessageService } from '../../shared/services/message.service';
 
 @Component({
     selector: 'app-content',
@@ -14,13 +15,14 @@ import { SearchInputComponent } from '../../shared/components/search-input/searc
     styleUrl: './content.component.scss'
 })
 export class ContentComponent {
-    contentsData = contents;
+    private messageService = inject(MessageService);
 
     private currentItem: any;
     private currentContent: string;
 
+    contentsData = contents;
+
     onDragStart(item, content: string) {
-        console.log(item, content)
         this.currentItem = item;
         this.currentContent = content;
     }
@@ -29,25 +31,22 @@ export class ContentComponent {
         event.preventDefault()
 
         if (this.currentContent == content) {
-            alert("nao pode")
-            return
+            this.messageService.show("Não é permitido a ordenação da coluna, utilize os filtros.", 0, "Erro");
+            return;
         }
 
         const items = this.contentsData[this.currentContent].items;
-        console.log(items)
-        console.log(this.currentItem.id)
         const index = items.findIndex(i => i.id == this.currentItem.id);
         items.splice(index, 1)
 
         this.contentsData[content].items.push(this.currentItem)
 
-
+        this.currentItem.showClass = false
         this.currentItem = undefined
         this.currentContent = undefined
     }
 
     onDragOver(event: Event) {
-        // console.log(event)
         event.preventDefault()
     }
 }

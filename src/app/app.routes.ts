@@ -6,6 +6,7 @@ import { ReleaseNotesComponent } from './modules/release-notes/release-notes.com
 import { StudentsAndTeachersComponent } from './modules/register/users/students-and-teachers/students-and-teachers.component';
 import { AdministrativeComponent } from './modules/register/users/administrative/administrative.component';
 import { ContentComponent } from './modules/content/content.component';
+import { SupportComponent } from './modules/support/support.component';
 
 export const routes: Routes = [
     {
@@ -36,6 +37,10 @@ export const routes: Routes = [
     {
         path: "content",
         component: ContentComponent,
+    },
+    {
+        path: "support",
+        component: SupportComponent,
     },
     { path: '**', component: ErrorComponent },
 ];

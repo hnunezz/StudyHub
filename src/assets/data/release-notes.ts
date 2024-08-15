@@ -22,6 +22,96 @@ export const releaseNotesData =
             ]
         },
         {
+            version: '0.0.4',
+            date: '13/11/2023',
+            changes: [
+                {
+                    title: 'Adiçao XPTO 01'
+                },
+                {
+                    title: 'Adiçao XPTO 02'
+                },
+                {
+                    title: 'Adiçao XPTO 03'
+                },
+                {
+                    title: 'Adiçao XPTO 04'
+                },
+            ]
+        },
+        {
+            version: '0.0.4',
+            date: '13/11/2023',
+            changes: [
+                {
+                    title: 'Adiçao XPTO 01'
+                },
+                {
+                    title: 'Adiçao XPTO 02'
+                },
+                {
+                    title: 'Adiçao XPTO 03'
+                },
+                {
+                    title: 'Adiçao XPTO 04'
+                },
+            ]
+        },
+        {
+            version: '0.0.4',
+            date: '13/11/2023',
+            changes: [
+                {
+                    title: 'Adiçao XPTO 01'
+                },
+                {
+                    title: 'Adiçao XPTO 02'
+                },
+                {
+                    title: 'Adiçao XPTO 03'
+                },
+                {
+                    title: 'Adiçao XPTO 04'
+                },
+            ]
+        },
+        {
+            version: '0.0.4',
+            date: '13/11/2023',
+            changes: [
+                {
+                    title: 'Adiçao XPTO 01'
+                },
+                {
+                    title: 'Adiçao XPTO 02'
+                },
+                {
+                    title: 'Adiçao XPTO 03'
+                },
+                {
+                    title: 'Adiçao XPTO 04'
+                },
+            ]
+        },
+        {
+            version: '0.0.4',
+            date: '13/11/2023',
+            changes: [
+                {
+                    title: 'Adiçao XPTO 01'
+                },
+                {
+                    title: 'Adiçao XPTO 02'
+                },
+                {
+                    title: 'Adiçao XPTO 03'
+                },
+                {
+                    title: 'Adiçao XPTO 04'
+                },
+            ]
+        },
+        {
             version: '0.0.3',
             date: '13/11/2023',
             changes: [

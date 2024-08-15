@@ -84,7 +84,7 @@ export const navigationItems: NavigationItem[] = [
     {
         icon: "pi-wrench",
         title: "Suporte",
-        path: "Suporte",
+        path: "support",
     },
     {
         icon: "pi-file",

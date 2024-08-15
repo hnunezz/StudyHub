@@ -5,6 +5,8 @@ import { NavigationComponent } from './core/components/navigation/navigation.com
 import { StorageKeys } from './shared/enums/storage-keys';
 import { LabelToTheme, Theme } from './shared/enums/theme';
 import { ThemeService } from './shared/services/theme.service';
+import { MessageService } from './shared/services/message.service';
+import { MessageComponent } from './core/components/message/message.component';
 
 @Component({
     selector: 'app-root',
@@ -12,7 +14,8 @@ import { ThemeService } from './shared/services/theme.service';
     imports: [
         CommonModule,
         RouterOutlet,
-        NavigationComponent
+        NavigationComponent,
+        MessageComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     templateUrl: './app.component.html',
@@ -35,5 +38,4 @@ export class AppComponent implements OnInit {
     navigateTo(path: string) {
         this.router.navigate([path]);
     }
-
 }

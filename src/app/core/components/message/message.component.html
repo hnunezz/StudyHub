@@ -1,0 +1,16 @@
+
+<section [class]="type" [ngClass]="{ 'Show-Message': showMessage }">
+    <div>
+        <span>
+            @switch (type) {
+                @case ("ERROR") { <i class="pi pi-times-circle"></i> }
+                @case ("SUCESS") { <i class="pi pi-check-circle"></i> }
+                @case ("WARNING") { <i class="pi pi-info-circle"></i> }
+                @case ("INFO") { <i class="pi pi-info-circle"></i> }
+            }
+            {{ summary }}
+        </span>
+
+        <span> {{ message }} </span>
+    </div>
+</section>

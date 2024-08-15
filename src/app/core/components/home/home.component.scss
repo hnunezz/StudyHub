@@ -2,8 +2,10 @@ main {
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 2fr 1fr 2fr;
+    grid-template-rows: 1.5fr 1fr 0.5fr;
     gap: 0px 0px;
+    height: auto;
+    justify-content: center;
     align-items: center;
     padding-right: 4px;
     overflow: scroll;
@@ -62,7 +64,7 @@ main {
                         stroke: var(--c1) !important;
                     }
                 }
-                &:nth-child(1).active{
+                &:nth-child(1).active {
                     use {
                         transition: ease 0.3s;
                         stroke: var(--c1) !important;
@@ -76,7 +78,7 @@ main {
                     }
                 }
 
-                &:nth-child(2).active{
+                &:nth-child(2).active {
                     use {
                         transition: ease 0.3s;
                         stroke: var(--c2) !important;
@@ -90,13 +92,12 @@ main {
                     }
                 }
 
-                &:nth-child(3).active{
+                &:nth-child(3).active {
                     use {
                         transition: ease 0.3s;
                         stroke: var(--c3) !important;
                     }
                 }
-
 
                 &:nth-child(4):hover {
                     use {
@@ -105,13 +106,12 @@ main {
                     }
                 }
 
-                &:nth-child(4).active{
+                &:nth-child(4).active {
                     use {
                         transition: ease 0.3s;
                         stroke: var(--c4) !important;
                     }
                 }
-
 
                 &:nth-child(5):hover {
                     use {
@@ -120,13 +120,12 @@ main {
                     }
                 }
 
-                &:nth-child(5).active{
+                &:nth-child(5).active {
                     use {
                         transition: ease 0.3s;
                         stroke: var(--c5) !important;
                     }
                 }
-
 
                 &:nth-child(6):hover {
                     use {
@@ -135,13 +134,12 @@ main {
                     }
                 }
 
-                &:nth-child(6).active{
+                &:nth-child(6).active {
                     use {
                         transition: ease 0.3s;
                         stroke: var(--c6) !important;
                     }
                 }
-
             }
         }
 
@@ -150,11 +148,11 @@ main {
         }
     }
 
-    .relase-section {
-        display: block;
-        height: 200px;
+}
 
-    }
+.relase-section {
+    display: block;
+    height: 800px;
 }
 
 hr {
